@@ -26,7 +26,7 @@ public class P_MULT extends AppCompatActivity {
                 TextView TV = (TextView) findViewById(R.id.tv_MULT);
                 try {
                     EditText IN = (EditText) findViewById(R.id.editText_MULT);
-                    String[] T = IN.getText().toString().split(",");
+                    String[] T = IN.getText().toString().toString().replaceAll(" ","").split(",");
 
                     BigDecimal BD = new BigDecimal("1");
                     int Resultado = 1;

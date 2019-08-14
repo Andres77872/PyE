@@ -26,8 +26,10 @@
             android:id="@+id/editText_AD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
+            android:digits="1,234567890-."
             android:ems="10"
+            android:hint="1,2,3,4"
             android:inputType="textPersonName"
             android:textSize="36sp" />
 
@@ -35,7 +37,7 @@
             android:id="@+id/btn_Calcular_AD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Calcular"
             android:textSize="36sp" />
 

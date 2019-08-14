@@ -26,8 +26,10 @@
             android:id="@+id/editText_FACT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
+            android:digits="1234567890-."
             android:ems="10"
+            android:hint="5"
             android:inputType="textPersonName"
             android:textSize="36sp" />
 
@@ -35,16 +37,28 @@
             android:id="@+id/btn_Calcular_FACT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:text="Calcular"
             android:textSize="36sp" />
 
-        <TextView
-            android:id="@+id/tv_FACT"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="36sp" />
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_FACT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="36sp" />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </LinearLayout>

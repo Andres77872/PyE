@@ -24,7 +24,7 @@ public class P_AD extends AppCompatActivity {
                 TextView TV = (TextView) findViewById(R.id.tv_AD);
                 try {
                     EditText IN = (EditText) findViewById(R.id.editText_AD);
-                    String[] T = IN.getText().toString().split(",");
+                    String[] T = IN.getText().toString().replaceAll(" ","").split(",");
 
                     double Resultado = 0;
                     for (String TXT : T) {

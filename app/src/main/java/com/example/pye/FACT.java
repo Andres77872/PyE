@@ -27,7 +27,7 @@ public class FACT extends AppCompatActivity {
                 try {
                     EditText IN = (EditText) findViewById(R.id.editText_FACT);
                     BigInteger BG=new BigInteger("1");
-                    long T = Integer.parseInt(IN.getText().toString());
+                    long T = Integer.parseInt(IN.getText().toString().trim());
                     if (T < 0) {
                         Toast.makeText(getApplicationContext(), "Introducir solo numeros enteros positivos", Toast.LENGTH_SHORT).show();
                         TV.setText("");
