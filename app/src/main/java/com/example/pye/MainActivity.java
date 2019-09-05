@@ -7,35 +7,30 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.pye.Tema1.Tema_1;
+import com.example.pye.Tema2.Tema_2;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_mult,btn_adt,btn_fact;
+    Button btn_Tema1,btn_Tema2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_mult=(Button) findViewById(R.id.btn_Multi);
-        btn_adt=(Button) findViewById(R.id.btn_Add);
-        btn_fact=(Button) findViewById(R.id.btn_Factorial);
-        btn_mult.setOnClickListener(new View.OnClickListener() {
+        btn_Tema1=(Button) findViewById(R.id.btn_Tema_1);
+        btn_Tema2=(Button) findViewById(R.id.btn_Tema_2);
+        btn_Tema1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent vw=new Intent(getApplicationContext(),P_MULT.class);
+                Intent vw=new Intent(getApplicationContext(), Tema_1.class);
                 startActivity(vw);
             }
         });
-        btn_adt.setOnClickListener(new View.OnClickListener() {
+        btn_Tema2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent vw=new Intent(getApplicationContext(),P_AD.class);
-                startActivity(vw);
-            }
-        });
-        btn_fact.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent vw=new Intent(getApplicationContext(),FACT.class);
+                Intent vw=new Intent(getApplicationContext(), Tema_2.class);
                 startActivity(vw);
             }
         });

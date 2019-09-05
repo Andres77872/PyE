@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".P_AD">
+    tools:context=".Tema1.act.P_AD">
 
     <TextView
         android:id="@+id/textView6"

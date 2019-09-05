@@ -1,4 +1,4 @@
-package com.example.pye;
+package com.example.pye.Tema1.act;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.pye.R;
 
 import java.math.BigInteger;
 

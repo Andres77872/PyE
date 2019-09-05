@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FACT"></activity>
-        <activity android:name=".P_MULT" />
-        <activity android:name=".P_AD" />
+        <activity android:name=".Tema2.act.P_T2_Aleatorio"></activity>
+        <activity android:name=".Tema2.act.P_T2_TamMuestra" />
+        <activity android:name=".Tema1.Tema_1" />
+        <activity android:name=".Tema2.Tema_2" />
+        <activity android:name=".Tema1.act.FACT" />
+        <activity android:name=".Tema1.act.P_MULT" />
+        <activity android:name=".Tema1.act.P_AD" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
