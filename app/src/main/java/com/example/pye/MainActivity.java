@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.pye.Tema1.Tema_1;
 import com.example.pye.Tema2.Tema_2;
+import com.example.pye.Tema3.Tema_3;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent vw=new Intent(getApplicationContext(), Tema_2.class);
+                startActivity(vw);
+            }
+        });
+        ((Button)findViewById(R.id.btn_Tema_3)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vw=new Intent(getApplicationContext(), Tema_3.class);
                 startActivity(vw);
             }
         });
