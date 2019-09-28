@@ -51,7 +51,7 @@ public class Tema_4 extends AppCompatActivity {
                 }
 
                 double Promedio = 0.0, Mediana = 0.0, Moda = 0;
-
+                int F = 0;
                 int ClaseMax = -1, Max = -1;
                 for (int i = 0; i < CantidadClases; i++) {
                     Promedio += Clases.get(i)[2] * Clases.get(i)[3];
@@ -59,20 +59,19 @@ public class Tema_4 extends AppCompatActivity {
                         Max = Clases.get(i)[3];
                         ClaseMax = i;
                     }
-                    if (i != 0) {
-                        Clases.get(i)[4] += Clases.get(i)[3];
-                    } else {
-                        Clases.get(i)[4] = Clases.get(i)[3];
-                    }
-                    //System.out.println(Clases.get(i)[3]);
+                    F += Clases.get(i)[3];
+                    Clases.get(i)[4] = F;
                 }
-                Promedio *= (double) Datos.length;
+                Promedio /= (double) Datos.length;
 
-                Mediana = Clases.get(ClaseMax - 1)[0] + (((Datos.length / 2) - Clases.get(ClaseMax - 1)[4]) / Clases.get(ClaseMax)[3]) * Amplitud;
-
-                Moda = Clases.get(ClaseMax - 1)[0] + (((Clases.get(ClaseMax)[3] - Clases.get(ClaseMax - 1)[3])
-                        / ((Clases.get(ClaseMax)[3] - Clases.get(ClaseMax - 1)[3]) + (Clases.get(ClaseMax)[3] + Clases.get(ClaseMax - 1)[3])))
-                        * Amplitud);
+                //System.out.println(Clases.get(ClaseMax)[0] + " : " + Clases.get(ClaseMax - 1)[4] + " : " + Clases.get(ClaseMax)[3] + " : " + Amplitud);
+                Mediana = Clases.get(ClaseMax)[0] +
+                        (((Datos.length / 2.0) - Clases.get(ClaseMax - 1)[4]) /
+                                Clases.get(ClaseMax)[3]) *
+                                (double) Amplitud;
+                double d1 = Clases.get(ClaseMax)[3] - Clases.get(ClaseMax - 1)[3], d2 = Clases.get(ClaseMax)[3] - Clases.get(ClaseMax + 1)[3];
+                System.out.println(Clases.get(ClaseMax)[0] + " : " + d1 + " : " + " : " + d2 + " : " + Amplitud);
+                Moda = Clases.get(ClaseMax)[0] + ((d1 / (d1 + d2)) * (double) Amplitud);
                 ((TextView) findViewById(R.id.txtV_T4_Promedio)).setText("Promedio " + Promedio);
                 ((TextView) findViewById(R.id.txtV_T4_Moda)).setText("Moda " + Moda);
                 ((TextView) findViewById(R.id.txtV_T4_Media)).setText("Media " + Mediana);
