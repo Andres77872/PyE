@@ -7,54 +7,77 @@
     android:orientation="vertical"
     tools:context=".Tema4.Tema_4">
 
-    <TextView
-        android:id="@+id/textView10"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Introducir datos separados por coma" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/txtV_T4_Entrada"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Introducir cantidad de intervalos" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introducir datos separados por coma" />
 
-    <EditText
-        android:id="@+id/txtV_T4_CantidadIntervalos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+            <EditText
+                android:id="@+id/txtV_T4_Entrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
 
-    <TextView
-        android:id="@+id/txtV_T4_Promedio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Promedio" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introducir cantidad de intervalos" />
 
-    <TextView
-        android:id="@+id/txtV_T4_Media"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Media" />
+            <EditText
+                android:id="@+id/txtV_T4_CantidadIntervalos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
 
-    <TextView
-        android:id="@+id/txtV_T4_Moda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Moda" />
+            <TextView
+                android:id="@+id/txtV_T4_Promedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promedio" />
 
-    <Button
-        android:id="@+id/btn_T4_Calcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular" />
+            <TextView
+                android:id="@+id/txtV_T4_Media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Media" />
+
+            <TextView
+                android:id="@+id/txtV_T4_Moda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moda" />
+
+            <Button
+                android:id="@+id/btn_T4_Calcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="240dp" >
+
+            </com.github.mikephil.charting.charts.BarChart>
+
+            <ListView
+                android:id="@+id/lst"
+                android:layout_width="match_parent"
+                android:layout_height="360dp" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
