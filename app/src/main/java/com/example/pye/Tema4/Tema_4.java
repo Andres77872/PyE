@@ -24,7 +24,7 @@ public class Tema_4 extends AppCompatActivity {
             public void onClick(View v) {
                 String Datos[] = ((EditText) findViewById(R.id.txtV_T4_Entrada)).getText().toString().split(",");
                 double CantidadClases = Double.parseDouble(((EditText) findViewById(R.id.txtV_T4_CantidadIntervalos)).getText().toString());
-                int CantidadDatos = Datos.length, Amplitud = (int) Math.ceil(CantidadDatos / CantidadClases);
+                int CantidadDatos = Datos.length, Amplitud = 0;
                 ArrayList<int[]> Clases = new ArrayList<>();
 
                 int[] DatosINT = new int[Datos.length];
@@ -32,17 +32,18 @@ public class Tema_4 extends AppCompatActivity {
                 for (int i = 0; i < Datos.length; i++) {
                     DatosINT[i] = Integer.parseInt(Datos[i]);
                 }
-
+                Amplitud = (int) Math.ceil((DatosINT[DatosINT.length - 1] - DatosINT[0]) / CantidadClases);
                 Arrays.sort(DatosINT);
-
                 for (int i = 0; i < CantidadClases; i++) {
-                    int Li = (Amplitud * i) + DatosINT[0], Ls = (Amplitud * (i + 1)) + DatosINT[DatosINT.length - 1];
+                    int Li = (Amplitud * i) + DatosINT[0], Ls = (Amplitud * (i + 1)) + DatosINT[0];
                     Clases.add(new int[]{Li, Ls, ((Amplitud * i) + (Amplitud * (i + 1))) / 2, 0, 0});
                 }
 
                 for (int D : DatosINT) {
                     for (int i = 0; i < CantidadClases; i++) {
                         int Li = Clases.get(i)[0], Ls = Clases.get(i)[1];
+                        //System.out.println(Li + " : " + Ls);
+                        //System.out.println(D+" : "+Li+" : "+Ls);
                         if (Li <= D && Ls > D) {
                             Clases.get(i)[3]++;
                         }
@@ -52,10 +53,9 @@ public class Tema_4 extends AppCompatActivity {
                 double Promedio = 0.0, Mediana = 0.0, Moda = 0;
 
                 int ClaseMax = -1, Max = -1;
-
                 for (int i = 0; i < CantidadClases; i++) {
                     Promedio += Clases.get(i)[2] * Clases.get(i)[3];
-                    if (Max > Clases.get(i)[3]) {
+                    if (Max < Clases.get(i)[3]) {
                         Max = Clases.get(i)[3];
                         ClaseMax = i;
                     }
@@ -64,6 +64,7 @@ public class Tema_4 extends AppCompatActivity {
                     } else {
                         Clases.get(i)[4] = Clases.get(i)[3];
                     }
+                    //System.out.println(Clases.get(i)[3]);
                 }
                 Promedio *= (double) Datos.length;
 
