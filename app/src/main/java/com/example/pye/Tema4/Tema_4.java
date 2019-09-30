@@ -39,9 +39,9 @@ public class Tema_4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String Datos[] = ((EditText) findViewById(R.id.txtV_T4_Entrada)).getText().toString().split(",");
-                double CantidadClases= Double.parseDouble(((EditText) findViewById(R.id.txtV_T4_CantidadIntervalos)).getText().toString());
+                double CantidadClases = Double.parseDouble(((EditText) findViewById(R.id.txtV_T4_CantidadIntervalos)).getText().toString());
 
-                ArrayList<int[]> Clases = new ArrayList<>();
+                ArrayList<double[]> Clases = new ArrayList<>();
 
                 //double CantidadClases = 10;
                 //String Datos[] = new String[98];
@@ -60,16 +60,16 @@ public class Tema_4 extends AppCompatActivity {
                     DatosINT[i] = Integer.parseInt(Datos[i]);
                 }
                 Arrays.sort(DatosINT);
-                Amplitud = (int) Math.ceil((DatosINT[DatosINT.length - 1] - DatosINT[0]) / CantidadClases);
-
+                Amplitud = (int) Math.ceil((DatosINT[DatosINT.length - 1] - DatosINT[0] + 1) / CantidadClases);
+                System.out.println(Amplitud);
                 for (int i = 0; i < CantidadClases; i++) {
                     int Li = (Amplitud * i) + DatosINT[0], Ls = (Amplitud * (i + 1)) + DatosINT[0];
-                    Clases.add(new int[]{Li, Ls, ((Amplitud * i) + (Amplitud * (i + 1))) / 2, 0, 0});
+                    Clases.add(new double[]{Li, Ls, (Li + Ls) / 2.0, 0, 0});
                 }
 
                 for (int D : DatosINT) {
                     for (int i = 0; i < CantidadClases; i++) {
-                        int Li = Clases.get(i)[0], Ls = Clases.get(i)[1];
+                        int Li = (int) Clases.get(i)[0], Ls = (int) Clases.get(i)[1];
                         //System.out.println(Li + " : " + Ls);
                         //System.out.println(D+" : "+Li+" : "+Ls);
                         if (Li <= D && Ls > D) {
@@ -84,7 +84,7 @@ public class Tema_4 extends AppCompatActivity {
                 for (int i = 0; i < CantidadClases; i++) {
                     Promedio += Clases.get(i)[2] * Clases.get(i)[3];
                     if (Max < Clases.get(i)[3]) {
-                        Max = Clases.get(i)[3];
+                        Max = (int) Clases.get(i)[3];
                         ClaseMax = i;
                     }
                     F += Clases.get(i)[3];
@@ -125,8 +125,8 @@ public class Tema_4 extends AppCompatActivity {
                 ArrayList<IBarDataSet> dataSets = new ArrayList<>();
 
                 for (int i = 0; i < CantidadClases; i++) {
-                    float val = Clases.get(i)[3];
-                    yVals1.add(new BarEntry(i+1, val));
+                    float val = (int) Clases.get(i)[3];
+                    yVals1.add(new BarEntry(i + 1, val));
 
 
                 }
@@ -146,12 +146,11 @@ public class Tema_4 extends AppCompatActivity {
                 adaptador.clear();
                 adaptador.add("Rango\t\t\t\t\t\tMC\t\t\t\t\t\tf\t\t\t\t\t\tF");
                 for (int i = 0; i < CantidadClases; i++) {
-                    adaptador.add("("+Clases.get(i)[0]+","+Clases.get(i)[1]+")\t\t\t\t\t\t"+Clases.get(i)[2]+"\t\t\t\t\t\t"+Clases.get(i)[3]+"\t\t\t\t\t\t"+Clases.get(i)[4]);
+                    adaptador.add("(" + (int) Clases.get(i)[0] + "," + (int) Clases.get(i)[1] + ")\t\t\t\t\t\t" + Clases.get(i)[2] + "\t\t\t\t\t\t" + (int) Clases.get(i)[3] + "\t\t\t\t\t\t" + (int) Clases.get(i)[4]);
                 }
 
 
-
-                ((ListView)findViewById(R.id.lst)).setAdapter(adaptador);
+                ((ListView) findViewById(R.id.lst)).setAdapter(adaptador);
 
             }
         });
