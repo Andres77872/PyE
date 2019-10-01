@@ -78,45 +78,55 @@ public class Tema_4 extends AppCompatActivity {
                     }
                 }
 
-                double Promedio = 0.0, Mediana = 0.0, Moda = 0;
+                double Promedio = 0.0, Mediana = 0.0, Moda = 0, Max = Datos.length / 2;
                 int F = 0;
-                int ClaseMax = -1, Max = -1;
+                int ClaseMax_Mediana = -1, ClaseMax_Moda = -1, MaxModa = -1;
                 for (int i = 0; i < CantidadClases; i++) {
                     Promedio += Clases.get(i)[2] * Clases.get(i)[3];
-                    if (Max < Clases.get(i)[3]) {
-                        Max = (int) Clases.get(i)[3];
-                        ClaseMax = i;
+                    if (MaxModa < Clases.get(i)[3]) {
+                        MaxModa = (int) Clases.get(i)[3];
+                        ClaseMax_Moda = i;
                     }
+
                     F += Clases.get(i)[3];
                     Clases.get(i)[4] = F;
+                    System.out.println(F + " : " + Max);
+                    if (F < Max) {
+                        ClaseMax_Mediana = i+1;
+                    }
+
+
                 }
                 Promedio /= (double) Datos.length;
+                System.out.println(ClaseMax_Mediana + "Mediana");
 
-                //System.out.println(Clases.get(ClaseMax)[0] + " : " + Clases.get(ClaseMax - 1)[4] + " : " + Clases.get(ClaseMax)[3] + " : " + Amplitud);
+                //System.out.println(Clases.get(ClaseMax_Mediana)[0] + " : " + Clases.get(ClaseMax_Mediana - 1)[4] + " : " + Clases.get(ClaseMax_Mediana)[3] + " : " + Amplitud);
 
                 double d1 = 0.0, d2 = 0.0;
-                if (ClaseMax > 0) {
-                    Mediana = Clases.get(ClaseMax)[0] +
-                            (((Datos.length / 2.0) - Clases.get(ClaseMax - 1)[4]) /
-                                    Clases.get(ClaseMax)[3]) *
-                                    (double) Amplitud;
-                    d1 = Clases.get(ClaseMax)[3] - Clases.get(ClaseMax - 1)[3];
+
+                Mediana = Clases.get(ClaseMax_Mediana)[0] +
+                        (((Datos.length / 2.0) - Clases.get(ClaseMax_Mediana - 1)[4]) /
+                                Clases.get(ClaseMax_Mediana)[3]) *
+                                (double) Amplitud;
+
+                if (ClaseMax_Moda > 0) {
+                    d1 = Clases.get(ClaseMax_Moda)[3] - Clases.get(ClaseMax_Moda - 1)[3];
                 } else {
-                    Mediana = Clases.get(ClaseMax)[0] +
-                            (((Datos.length / 2.0)) /
-                                    Clases.get(ClaseMax)[3]) *
-                                    (double) Amplitud;
-                    d1 = Clases.get(ClaseMax)[3];
+                    d1 = Clases.get(ClaseMax_Moda)[3];
                 }
-                if (ClaseMax == CantidadClases - 1) {
-                    d2 = Clases.get(ClaseMax)[3];
+                if (ClaseMax_Moda == CantidadClases - 1) {
+                    d2 = Clases.get(ClaseMax_Moda)[3];
+                } else {
+                    d2 = Clases.get(ClaseMax_Moda)[3] - Clases.get(ClaseMax_Moda + 1)[3];
                 }
-                System.out.println(Clases.get(ClaseMax)[0] + " : " + d1 + " : " + " : " + d2 + " : " + Amplitud);
-                Moda = Clases.get(ClaseMax)[0] + ((d1 / (d1 + d2)) * (double) Amplitud);
+                System.out.println(Clases.get(ClaseMax_Moda)[0] + " : " + d1 + " : " + " : " + d2 + " : " + Amplitud);
+                Moda = Clases.get(ClaseMax_Moda)[0] + ((d1 / (d1 + d2)) * (double) Amplitud);
                 ((TextView) findViewById(R.id.txtV_T4_Promedio)).setText("Promedio " + Promedio);
                 ((TextView) findViewById(R.id.txtV_T4_Moda)).setText("Moda " + Moda);
-                ((TextView) findViewById(R.id.txtV_T4_Media)).setText("Media " + Mediana);
+                ((TextView) findViewById(R.id.txtV_T4_Media)).setText("Mediana " + Mediana);
 
+
+                //================================================================================
 
                 BarChart bchart = findViewById(R.id.chart1);
 
