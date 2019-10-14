@@ -52,4 +52,11 @@
         android:layout_weight="0"
         android:text="TEMA 5" />
 
+    <Button
+        android:id="@+id/btn_Tema_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Tema 6" />
+
 </LinearLayout>

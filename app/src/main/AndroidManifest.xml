@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tema5.Tema_5"></activity>
+        <activity android:name=".Tema6.Tema_6"></activity>
+        <activity android:name=".Tema5.Tema_5" />
         <activity android:name=".Tema4.Tema_4" />
         <activity android:name=".Tema3.Tema_3" />
         <activity android:name=".Tema2.act.P_T2_Aleatorio" />
