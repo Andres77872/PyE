@@ -9,23 +9,26 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Introducir datos separados por coma" />
 
             <EditText
                 android:id="@+id/txtV_T4_Entrada"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:ems="10"
                 android:inputType="text" />
 
@@ -33,12 +36,14 @@
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Introducir cantidad de intervalos" />
 
             <EditText
                 android:id="@+id/txtV_T4_CantidadIntervalos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:ems="10"
                 android:inputType="number" />
 
@@ -46,38 +51,45 @@
                 android:id="@+id/txtV_T4_Promedio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Promedio" />
 
             <TextView
                 android:id="@+id/txtV_T4_Media"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Media" />
 
             <TextView
                 android:id="@+id/txtV_T4_Moda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Moda" />
 
             <Button
                 android:id="@+id/btn_T4_Calcular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="0"
                 android:text="Calcular" />
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/chart1"
                 android:layout_width="match_parent"
-                android:layout_height="240dp" >
+                android:layout_height="240dp"
+                android:layout_weight="0">
 
             </com.github.mikephil.charting.charts.BarChart>
 
-            <ListView
-                android:id="@+id/lst"
-                android:layout_width="match_parent"
-                android:layout_height="360dp" />
         </LinearLayout>
     </ScrollView>
+
+    <ListView
+        android:id="@+id/lst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
 
 </LinearLayout>

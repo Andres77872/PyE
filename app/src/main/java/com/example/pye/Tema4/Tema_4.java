@@ -61,12 +61,11 @@ public class Tema_4 extends AppCompatActivity {
                 }
                 Arrays.sort(DatosINT);
                 Amplitud = (int) Math.ceil((DatosINT[DatosINT.length - 1] - DatosINT[0] + 1) / CantidadClases);
-                System.out.println(Amplitud);
+                //System.out.println(Amplitud);
                 for (int i = 0; i < CantidadClases; i++) {
                     int Li = (Amplitud * i) + DatosINT[0], Ls = (Amplitud * (i + 1)) + DatosINT[0];
                     Clases.add(new double[]{Li, Ls, (Li + Ls) / 2.0, 0, 0});
                 }
-
                 for (int D : DatosINT) {
                     for (int i = 0; i < CantidadClases; i++) {
                         int Li = (int) Clases.get(i)[0], Ls = (int) Clases.get(i)[1];
@@ -90,7 +89,7 @@ public class Tema_4 extends AppCompatActivity {
 
                     F += Clases.get(i)[3];
                     Clases.get(i)[4] = F;
-                    System.out.println(F + " : " + Max);
+                    //System.out.println(F + " : " + Max);
                     if (F < Max) {
                         ClaseMax_Mediana = i+1;
                     }
@@ -98,7 +97,7 @@ public class Tema_4 extends AppCompatActivity {
 
                 }
                 Promedio /= (double) Datos.length;
-                System.out.println(ClaseMax_Mediana + "Mediana");
+                //System.out.println(ClaseMax_Mediana + "Mediana");
 
                 //System.out.println(Clases.get(ClaseMax_Mediana)[0] + " : " + Clases.get(ClaseMax_Mediana - 1)[4] + " : " + Clases.get(ClaseMax_Mediana)[3] + " : " + Amplitud);
 
@@ -119,11 +118,17 @@ public class Tema_4 extends AppCompatActivity {
                 } else {
                     d2 = Clases.get(ClaseMax_Moda)[3] - Clases.get(ClaseMax_Moda + 1)[3];
                 }
-                System.out.println(Clases.get(ClaseMax_Moda)[0] + " : " + d1 + " : " + " : " + d2 + " : " + Amplitud);
+                //System.out.println(Clases.get(ClaseMax_Moda)[0] + " : " + d1 + " : " + " : " + d2 + " : " + Amplitud);
                 Moda = Clases.get(ClaseMax_Moda)[0] + ((d1 / (d1 + d2)) * (double) Amplitud);
                 ((TextView) findViewById(R.id.txtV_T4_Promedio)).setText("Promedio " + Promedio);
                 ((TextView) findViewById(R.id.txtV_T4_Moda)).setText("Moda " + Moda);
                 ((TextView) findViewById(R.id.txtV_T4_Media)).setText("Mediana " + Mediana);
+
+                //++++++++++++++++++++++++++++++++++++++++++++
+                for (double d[]:Clases) {
+                    System.out.println(Arrays.toString(d));
+                }
+                //++++++++++++++++++++++++++++++++++++++++++++
 
 
                 //================================================================================
@@ -156,7 +161,7 @@ public class Tema_4 extends AppCompatActivity {
                 adaptador.clear();
                 adaptador.add("Rango\t\t\t\t\t\tMC\t\t\t\t\t\tf\t\t\t\t\t\tF");
                 for (int i = 0; i < CantidadClases; i++) {
-                    adaptador.add("(" + (int) Clases.get(i)[0] + "," + (int) Clases.get(i)[1] + ")\t\t\t\t\t\t" + Clases.get(i)[2] + "\t\t\t\t\t\t" + (int) Clases.get(i)[3] + "\t\t\t\t\t\t" + (int) Clases.get(i)[4]);
+                    adaptador.add("[" + (int) Clases.get(i)[0] + "," + (int) Clases.get(i)[1] + ")\t\t\t\t\t\t" + Clases.get(i)[2] + "\t\t\t\t\t\t" + (int) Clases.get(i)[3] + "\t\t\t\t\t\t" + (int) Clases.get(i)[4]);
                 }
 
 
