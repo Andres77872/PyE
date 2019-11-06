@@ -11,43 +11,50 @@
         android:id="@+id/textView30"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Medidas de dispercion"
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/txtV_T7_Entrada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="4,5,6,7,8,9"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_T7_Calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular" />
+        android:text="Calcular"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/lbl_T7_Rango"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="El rango es: "
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/lbl_T7_DesviacionMedia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="La desviacion media es: "
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/lbl_T7_DesviacionEstandar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="La desviacion estandar es: "
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/lbl_T7_Varianza"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="La varianza es: "
+        android:textSize="20sp" />
 </LinearLayout>
