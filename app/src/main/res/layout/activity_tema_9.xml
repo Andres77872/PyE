@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tema9.Tema_9">
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recta de regresion"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='Introducir los datos separados por ";" y los pares por "," (X;Y)'
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edt_T9_Entrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="13;12,34;32"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_T9_Calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lbl_T9_Pearson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="r = "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_T9_m"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="m ="
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_T9_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="b ="
+        android:textSize="18sp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart_T9_Grafica"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_weight="0">
+
+    </com.github.mikephil.charting.charts.LineChart>
+</LinearLayout>

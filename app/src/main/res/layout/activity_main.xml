@@ -73,4 +73,11 @@
         android:layout_weight="0"
         android:text="Tema 8" />
 
+    <Button
+        android:id="@+id/btn_Tema_9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Tema 9" />
+
 </LinearLayout>
