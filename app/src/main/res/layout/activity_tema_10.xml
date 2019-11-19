@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tema10.Tema_10">
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Medidas de forma"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='Introducir los datos separados por ";" y los pares por "," (X;Y)'
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edt_T10_Entrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1;2,2;5,3;9,4;5,5;2"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_T10_Calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/lbl_T10_S"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sesgo = "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lbl_T10_K"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Curtosis = "
+        android:textSize="18sp" />
+</LinearLayout>

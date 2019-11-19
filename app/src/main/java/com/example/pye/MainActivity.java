@@ -16,6 +16,7 @@ import com.example.pye.Tema6.Tema_6;
 import com.example.pye.Tema7.Tema_7;
 import com.example.pye.Tema8.Tema_8;
 import com.example.pye.Tema9.Tema_9;
+import com.example.pye.Tema10.Tema_10;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent vw = new Intent(getApplicationContext(), Tema_9.class);
+                startActivity(vw);
+            }
+        });
+        ((Button) findViewById(R.id.btn_Tema_10)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent vw = new Intent(getApplicationContext(), Tema_10.class);
                 startActivity(vw);
             }
         });
