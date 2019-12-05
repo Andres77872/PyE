@@ -5,48 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Tema10.Tema_10">
+    tools:context=".Tema11.Tema_11">
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/textView35"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Medidas de forma"
+        android:text="Probabilidad simple"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/textView38"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Introducir datos separados por coma"
+        android:text="Introducir los datos en el formato (etiqueta;cantidad) separados por coma"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/edt_T10_Entrada"
+        android:id="@+id/edt_T11_Entrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="a;100,b;150,c;50"
+        android:inputType="textPersonName"
+        android:text="a;100,b;150,c;50"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edt_T11_Busqueda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="24sp" />
+        android:text="Name" />
 
     <Button
-        android:id="@+id/btn_T10_Calcular"
+        android:id="@+id/btn_T11_Calcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/lbl_T10_S"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sesgo = "
+        android:text="Button"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/lbl_T10_K"
+        android:id="@+id/lbl_T11_Saldia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Curtosis = "
+        android:text="Probabilidad = "
         android:textSize="18sp" />
 </LinearLayout>

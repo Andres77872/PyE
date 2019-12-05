@@ -23,6 +23,19 @@
         android:inputType="textPersonName"
         android:textSize="20sp" />
 
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de intervalos, vacio si no son agrupados" />
+
+    <EditText
+        android:id="@+id/txtV_T7_Intervalo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
     <Button
         android:id="@+id/btn_T7_Calcular"
         android:layout_width="match_parent"

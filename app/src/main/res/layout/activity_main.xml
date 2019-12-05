@@ -17,74 +17,93 @@
         android:textSize="36sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_Tema_1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 1" />
+        android:layout_height="match_parent"
+        android:layout_weight="0">
 
-    <Button
-        android:id="@+id/btn_Tema_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btn_Tema_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 3" />
+            <Button
+                android:id="@+id/btn_Tema_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Tema 1" />
 
-    <Button
-        android:id="@+id/btn_Tema_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 4" />
+            <Button
+                android:id="@+id/btn_Tema_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Muestreo" />
 
-    <Button
-        android:id="@+id/btn_Tema_5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="TEMA 5" />
+            <Button
+                android:id="@+id/btn_Tema_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="medidas de tendencia central para datos no agrupados" />
 
-    <Button
-        android:id="@+id/btn_Tema_6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 6" />
+            <Button
+                android:id="@+id/btn_Tema_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="medidas de tendencia central para datos agrupados" />
 
-    <Button
-        android:id="@+id/btn_Tema_7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 7" />
+            <Button
+                android:id="@+id/btn_Tema_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Media Geometrica, Armonica y Ponderada" />
 
-    <Button
-        android:id="@+id/btn_Tema_8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 8" />
+            <Button
+                android:id="@+id/btn_Tema_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Bayes" />
 
-    <Button
-        android:id="@+id/btn_Tema_9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 9" />
+            <Button
+                android:id="@+id/btn_Tema_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Medidas de dispercion" />
 
-    <Button
-        android:id="@+id/btn_Tema_10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="Tema 10" />
+            <Button
+                android:id="@+id/btn_Tema_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Pearson" />
+
+            <Button
+                android:id="@+id/btn_Tema_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Recta de regresion" />
+
+            <Button
+                android:id="@+id/btn_Tema_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Medidas de forma" />
+
+            <Button
+                android:id="@+id/btn_Tema_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Probabilidad simple" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

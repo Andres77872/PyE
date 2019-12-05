@@ -58,6 +58,12 @@
         android:text="b ="
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/lbl_T9_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="e =" />
+
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart_T9_Grafica"
         android:layout_width="match_parent"

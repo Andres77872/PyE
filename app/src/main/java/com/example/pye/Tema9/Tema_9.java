@@ -75,10 +75,19 @@ public class Tema_9 extends AppCompatActivity {
                     int N = Entrada.length;
 
                     float m = (float) (((N * Mxy) - (Mx * My)) / ((N * Mx2) - Math.pow(Mx, 2))),
-                            b = (float) (((My * Mx2) - (Mx * Mxy)) / ((N * Mx2) - Math.pow(Mx, 2)));
+                            b = (float) (((My * Mx2) - (Mx * Mxy)) / ((N * Mx2) - Math.pow(Mx, 2))),
+                            e=0.0f;
+//2.0584
+                    for (String Dato : Entrada) {
+                        String[] D = Dato.split(";");
+                        e+=Math.pow(Integer.parseInt(D[1])-((m*Integer.parseInt(D[0]))+b),2);
+                    }
+                    e/=(float)Entrada.length;
+                    e=(float)Math.sqrt(e);
 
                     ((TextView) findViewById(R.id.lbl_T9_m)).setText(String.format("m = %s", ((int) (m * 1000)) / 1000.0));
                     ((TextView) findViewById(R.id.lbl_T9_b)).setText(String.format("b = %s", ((int) (b * 1000)) / 1000.0));
+                    ((TextView) findViewById(R.id.lbl_T9_e)).setText(String.format("e = %s", ((int) (e * 1000)) / 1000.0));
 
 
                     for (String Dato : Entrada) {
